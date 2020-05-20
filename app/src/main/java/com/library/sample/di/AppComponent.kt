@@ -1,7 +1,7 @@
 package com.library.sample.di
 
 import android.app.Application
-import com.library.base.di.ViewModelModule
+import com.library.base.di.modules.ViewModelModule
 import com.library.base.di.modules.CoreNetworkModule
 import com.library.sample.SampleApplication
 import com.library.sample.di.modules.ActivityBindingModule

@@ -1,6 +1,7 @@
-package com.library.base.di
+package com.library.base.di.modules
 
 import androidx.lifecycle.ViewModelProvider
+import com.library.base.di.BaseViewModelFactory
 import dagger.Binds
 import dagger.Module
 

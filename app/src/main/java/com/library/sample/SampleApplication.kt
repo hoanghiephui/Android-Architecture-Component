@@ -1,9 +1,12 @@
 package com.library.sample
 
 import com.google.android.play.core.missingsplits.MissingSplitsManagerFactory
+import com.library.base.log.AppLogTree
+import com.library.base.log.CrashlyticsTree
 import com.library.sample.di.AppComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
+import timber.log.Timber
 
 class SampleApplication : DaggerApplication() {
     private val appComponent by lazy { AppComponent.getComponent(this) }
@@ -18,5 +21,10 @@ class SampleApplication : DaggerApplication() {
             return
         }
         super.onCreate()
+        if (BuildConfig.DEBUG) {
+            Timber.plant(AppLogTree())
+        } else {
+            Timber.plant(CrashlyticsTree())
+        }
     }
 }

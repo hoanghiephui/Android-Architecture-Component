@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+
+        <!--Material shape attributes-->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Base.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Base.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Base.LargeComponent</item>
+
+        <!--Material type attributes-->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Base.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Base.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Base.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Base.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Base.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Base.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Base.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Base.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Base.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Base.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Base.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Base.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Base.Overline</item>
+
+        <item name="colorPrimary">@color/color_dark_blue</item>
+        <item name="android:textColorLink">?attr/colorPrimary</item>
+        <item name="colorControlActivated">?attr/colorPrimary</item>
+
+    </style>
+
+    <style name="BaseTheme" parent="Base.Theme"/>
+</resources>

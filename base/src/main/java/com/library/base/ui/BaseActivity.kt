@@ -21,7 +21,9 @@ abstract class BaseActivity : DaggerAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(getLayout())
+        initView()
         initViewModel()
+        initLogic()
         if (initCheckUpdateApp()) {
             appUpdateManager = AppUpdateManagerFactory.create(this)
         }
@@ -46,8 +48,13 @@ abstract class BaseActivity : DaggerAppCompatActivity() {
     @LayoutRes
     abstract fun getLayout(): Int
 
+    abstract fun initView()
+
     abstract fun initViewModel()
 
+    abstract fun initLogic()
+
+    //Call when you want to update the application from Google Play
     open fun initCheckUpdateApp(): Boolean = false
     open fun onShowSnackbarUpdateFail() {}
     open fun checkAndUpdateApp() {

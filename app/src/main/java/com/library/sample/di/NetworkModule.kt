@@ -12,6 +12,6 @@ class NetworkModule {
     @Singleton
     @Provides
     fun provideCoinBaseEndpoint(retrofit: Retrofit): SampleEndpoint =
-        retrofit.newBuilder().baseUrl(BuildConfig.REST_URL).build()
+        retrofit.newBuilder().baseUrl(BuildConfig.BASE_URL).build()
             .create(SampleEndpoint::class.java)
 }

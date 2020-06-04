@@ -20,7 +20,9 @@ abstract class BaseActivity : DaggerAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(getLayout())
+        val layoutId = javaClass.getAnnotation(LayoutId::class.java)
+        val contentViewId = layoutId?.value
+        contentViewId?.let { setContentView(it) }
         initView()
         initViewModel()
         initLogic()
@@ -44,9 +46,6 @@ abstract class BaseActivity : DaggerAppCompatActivity() {
             }
         }
     }
-
-    @LayoutRes
-    abstract fun getLayout(): Int
 
     abstract fun initView()
 

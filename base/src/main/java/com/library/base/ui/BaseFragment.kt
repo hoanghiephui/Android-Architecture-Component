@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.LayoutRes
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
@@ -22,16 +21,17 @@ abstract class BaseFragment : DaggerFragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? = container?.inflate(getLayout())
+    ): View? {
+        val layoutId = javaClass.getAnnotation(LayoutId::class.java)
+        val contentViewId = layoutId?.value
+        return contentViewId?.let { container?.inflate(it) }
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViewModel()
         viewCreated(view, savedInstanceState)
     }
-
-    @LayoutRes
-    abstract fun getLayout(): Int
 
     abstract fun initViewModel()
 

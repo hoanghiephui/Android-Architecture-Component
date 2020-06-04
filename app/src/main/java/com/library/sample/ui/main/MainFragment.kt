@@ -6,13 +6,13 @@ import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.library.base.extensions.viewModelProvider
 import com.library.base.ui.BaseFragment
+import com.library.base.ui.LayoutId
 import com.library.sample.R
 import kotlinx.android.synthetic.main.fragment_main.*
 
+@LayoutId(R.layout.fragment_main)
 class MainFragment : BaseFragment(), BottomNavigationView.OnNavigationItemSelectedListener {
     private lateinit var viewModel: MainFragmentViewModel
-
-    override fun getLayout() = R.layout.fragment_main
 
     override fun initViewModel() {
         viewModel = viewModelProvider(viewModelFactory)

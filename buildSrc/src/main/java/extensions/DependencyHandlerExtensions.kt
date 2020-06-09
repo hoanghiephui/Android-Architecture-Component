@@ -149,6 +149,7 @@ fun DependencyHandler.addDependenciesBase() {
     // Google Play Instant and Google Play core
     implementation(Dependencies.INSTANT_APPS)
     implementation(Dependencies.PLAY_CORE)
+    implementation(Dependencies.GOOGLE_BILLING)
     // Dagger
     implementation(Dependencies.DAGGER_ANDROID)
     implementation(Dependencies.DAGGER_ANDROID_SUPPORT)

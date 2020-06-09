@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.library.base.extensions.show
 import com.library.base.extensions.viewModelProvider
 import com.library.base.ui.BaseFragment
 import com.library.base.ui.LayoutId
 import com.library.sample.R
+import com.library.sample.ui.func.BillingFragment
 import kotlinx.android.synthetic.main.fragment_main.*
 
 @LayoutId(R.layout.fragment_main)
@@ -23,6 +25,9 @@ class MainFragment : BaseFragment(), BottomNavigationView.OnNavigationItemSelect
             offscreenPageLimit = 2
         }
         bottomBar.setOnNavigationItemSelectedListener(this)
+        btnBilling.setOnClickListener {
+            BillingFragment().show(childFragmentManager)
+        }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

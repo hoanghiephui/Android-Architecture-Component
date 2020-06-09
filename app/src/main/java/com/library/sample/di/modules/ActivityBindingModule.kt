@@ -4,6 +4,7 @@ import com.library.base.di.ActivityScoped
 import com.library.sample.di.AppComponent
 import com.library.sample.ui.MainActivity
 import com.library.sample.ui.MainActivityModule
+import com.library.sample.ui.func.BillingModule
 import com.library.sample.ui.main.MainFragmentModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -26,7 +27,8 @@ abstract class ActivityBindingModule {
             // activity
             MainActivityModule::class,
             // fragments
-            MainFragmentModule::class
+            MainFragmentModule::class,
+            BillingModule::class
         ]
     )
     internal abstract fun mainActivity(): MainActivity

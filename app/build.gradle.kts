@@ -21,6 +21,12 @@ android {
         versionName = BuildDefaultConfig.VERSION_NAME
 
         vectorDrawables.useSupportLibrary = BuildDefaultConfig.SUPPORT_LIBRARY_VECTOR_DRAWABLES
+        buildConfigField(
+            "String",
+            "GOOGLE_LICENCE",
+            "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhjL76635QjAxyYAcD+IOKAcehxlY+ZOrHyQH+G4vNJJE96NdwRA+NDhQGMls6xMC/2Ut+0D69kPMU3Iti0QyQs3zsxSqgXSLdYxRc5uTUYIt6Olm4XsLr+bMEXYfWQFx8yBJZr3Q3EFCL+12xO4A7siAbnVwygpLmmj7D5VBq43BNrukuJ2rr8EoA5jdDuFaSU83WZ+182NIhE8e9a3fj/YeObv5gv+qbDKiWdQgWLZa/TVqUysHgt4mFHuqcy8zb8t07OdcQY4/cy0A8O3YhXDQgni4p6NE/YZyA/11iEuzjI6jM171WGb8yNK/Th/3SlE/F0RPbDJU+iHK920dQQIDAQAB\""
+        )
+        buildConfigField("String", "SUB_ONE", "\"com.blockchain.android.month\"")
     }
 
     buildTypes {
@@ -74,5 +80,5 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     addDependenciesBase()
     implementation(project(BuildModules.BASE))
-
+    implementation(project(":billing"))
 }

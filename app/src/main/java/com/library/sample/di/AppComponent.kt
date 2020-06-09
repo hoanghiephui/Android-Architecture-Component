@@ -1,10 +1,11 @@
 package com.library.sample.di
 
 import android.app.Application
-import com.library.base.di.modules.ViewModelModule
 import com.library.base.di.modules.CoreNetworkModule
+import com.library.base.di.modules.ViewModelModule
 import com.library.sample.SampleApplication
 import com.library.sample.di.modules.ActivityBindingModule
+import com.library.sample.di.modules.AppModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -26,7 +27,8 @@ import javax.inject.Singleton
         ViewModelModule::class,
         CoreNetworkModule::class,
         NetworkModule::class,
-        ActivityBindingModule::class
+        ActivityBindingModule::class,
+        AppModule::class
     ]
 )
 interface AppComponent : AndroidInjector<DaggerApplication> {

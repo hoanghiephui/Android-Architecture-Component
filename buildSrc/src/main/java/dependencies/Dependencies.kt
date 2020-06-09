@@ -65,6 +65,7 @@ object Dependencies {
     const val DAGGER_ANDROID_PROCESSOR = "com.google.dagger:dagger-android-processor:${BuildDependenciesVersions.DAGGER_ANDROID}"
     const val GSON = "com.google.code.gson:gson:${BuildDependenciesVersions.GSON}"
     const val OK_HTTP = "com.squareup.okhttp3:okhttp:${BuildDependenciesVersions.OK_HTTP}"
+    const val GOOGLE_BILLING = "com.android.billingclient:billing:2.2.1"
 
     const val PLAY_SERVICES_BASE = "com.google.android.gms:play-services-base:17.2.1"
     const val PLAY_SERVICES_AUTH = "com.google.android.gms:play-services-auth:17.0.0"

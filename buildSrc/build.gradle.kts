@@ -14,7 +14,7 @@ repositories {
 }
 
 object AppVersion {
-    const val GRADLE_ANDROID = "4.0.0"
+    const val GRADLE_ANDROID = "4.0.1"
     const val KOTLIN = "1.3.72"
     const val NAVIGATION = "2.1.0"
     const val GOOGLE_SERVICES = "4.3.3"
